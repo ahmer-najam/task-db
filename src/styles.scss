@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.p-datepicker:not(.p-datepicker-inline) {
+  background: #f3f0f0;
+  border: 0 none;
+  box-shadow: 0 2px 12px 0 #2196f3 !important;
+}
+
+.p-datepicker table td.p-datepicker-today > span.p-highlight {
+  color: #3c60c9;
+  background: #dadee3;
+  border-color: #03a9f4;
+  font-weight: 700;
+}
+
+// .p-inputtext-sm .p-inputtext {
+//   font-size: 0.875rem;
+//   padding: 0.65625rem 0.65625rem;
+//   min-width: 210px !important;
+// }
+
+.p-calendar .p-inputtext {
+  flex: 1 1 auto;
+  width: 1%;
+  padding: 0px !important;
+  border: none !important;
+}
+
+label {
+  font-weight: 700;
+}

@@ -1,0 +1,12 @@
+<div class="container mt-3">
+  <div class="row" *ngIf="service.showCalendar">
+    <div class="col-sm">
+      <app-task-calendar></app-task-calendar>
+    </div>
+  </div>
+  <div class="row" *ngIf="!service.showCalendar">
+    <div class="col-sm">
+      <app-task-details></app-task-details>
+    </div>
+  </div>
+</div>

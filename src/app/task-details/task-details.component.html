@@ -1,0 +1,124 @@
+<mat-card
+  style="width: 60%; border-radius: 5px; box-shadow: 2px 1px #888888"
+  class="m-auto"
+>
+  <mat-card-content>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label>Task *</label>
+            <input
+              class="form-control"
+              name="title"
+              id="title"
+              #title="ngModel"
+              [(ngModel)]="service.formData.title"
+              [class.is-invalid]="title.touched && title.invalid"
+              required
+              maxlength="50"
+              pattern=""
+            />
+            <small class="text-danger" *ngIf="title.touched && title.invalid">
+              Please enter valid title</small
+            >
+          </div>
+        </div>
+
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label>Color *</label>
+            <select
+              class="form-control"
+              name="color"
+              id="color"
+              #color="ngModel"
+              [(ngModel)]="service.formData.color"
+              [class.is-invalid]="color.touched && color.invalid"
+              required
+              pattern=""
+            >
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+              <option value="red">Red</option>
+            </select>
+            <small class="text-danger" *ngIf="color.touched && color.invalid">
+              Please enter valid title</small
+            >
+          </div>
+        </div>
+
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="start">Start Date</label>
+            <p-calendar
+              id="start"
+              #start="ngModel"
+              [(ngModel)]="service.formData.start"
+              [showTime]="true"
+              inputId="start"
+              class="p-inputtext-sm form-control"
+              [readonlyInput]="true"
+            ></p-calendar>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="end">End Date</label>
+            <p-calendar
+              id="end"
+              #end="ngModel"
+              [(ngModel)]="service.formData.end"
+              [showTime]="true"
+              inputId="end"
+              class="p-inputtext-sm form-control"
+              [readonlyInput]="true"
+              [required]="true"
+              [class.is-invalid]="
+                end.touched &&
+                this.service.formData.end < this.service.formData.start
+              "
+            ></p-calendar>
+            <small
+              class="text-danger"
+              *ngIf="
+                end.touched &&
+                this.service.formData.end < this.service.formData.start
+              "
+            >
+              End Date should be greater than Start Date</small
+            >
+          </div>
+        </div>
+
+        <div class="col-sm-12">
+          <button
+            style="width: 100%"
+            class="btn btn-primary mb-2"
+            type="button"
+            (click)="onSubmit()"
+            [disabled]="!isValid"
+          >
+            Save
+          </button>
+          <button
+            style="width: 100%"
+            class="btn btn-danger mb-2"
+            type="button"
+            (click)="onDelete()"
+          >
+            Delete
+          </button>
+          <button
+            style="width: 100%"
+            class="btn btn-warning mb-2"
+            type="button"
+            (click)="resetForm()"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
