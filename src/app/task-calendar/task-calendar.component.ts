@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import {
   CalendarOptions,
   DateSelectArg,
@@ -71,6 +70,5 @@ export class TaskCalendarComponent implements OnInit {
 
   handleEvents(events: EventApi[]) {
     this.currentEvents = events;
-    //this.currentEvents = this.service.INITIAL_EVENTS as EventApi[];
   }
 }

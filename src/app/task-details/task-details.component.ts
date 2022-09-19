@@ -21,13 +21,15 @@ export class TaskDetailsComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.service.formData);
-    if (this.service.formData.id == '0') {
-      this.service.addEvent();
-    } else {
-      this.service.updateEvent();
+    this.validateForm();
+    if (this.isValid) {
+      if (this.service.formData.id == '0') {
+        this.service.addEvent();
+      } else {
+        this.service.updateEvent();
+      }
+      this.service.showCalendar = true;
     }
-    this.service.showCalendar = true;
   }
 
   onDelete() {
