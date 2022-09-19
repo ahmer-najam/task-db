@@ -5,3 +5,12 @@
 .example-form-field {
   // width: 400px;
 }
+
+.my-card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-top: 60px; /* Added */
+  margin-bottom: 10px; /* Added */
+  border-radius: 5px;
+  box-shadow: 2px 1px #888888;
+}

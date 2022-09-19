@@ -53,7 +53,9 @@ export class TaskCalendarComponent implements OnInit {
     this.service.selectInfo = selectInfo;
     this.service.initData();
     this.service.formData.start = selectInfo.start;
-    this.service.formData.end = selectInfo.start;
+    this.service.formData.end = new Date(
+      selectInfo.start.setMinutes(selectInfo.start.getMinutes() + 30)
+    );
 
     this.service.showCalendar = false;
   }
