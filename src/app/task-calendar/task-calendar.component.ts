@@ -25,7 +25,7 @@ export class TaskCalendarComponent implements OnInit {
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek',
     },
     initialView: 'dayGridMonth',
-    initialEvents: this.service.INITIAL_EVENTS, // alternatively, use the `events` setting to fetch from a feed
+    initialEvents: this.service.INITIAL_EVENTS,
     weekends: true,
     editable: true,
     selectable: true,
