@@ -1,25 +1,18 @@
+# Task DB
 
-# FullCalendar 13 Angular Example Project
+This is a fully-buildable example project for FullCalendar and Angular.
 
-This is a fully-buildable example project for FullCalendar and Angular. It was initially set up with the `ng new` command of the [Angular CLI], but with lots of stuff stripped out including testing and linting. For a complete walkthrough, read the [FullCalendar Angular Docs &raquo;](https://fullcalendar.io/docs/angular)
+## Installations
 
-## Installation
+- First install NodeJs from https://nodejs.org/en/
+- Install Angular CLI through following command
+  > npm install -g @angular/cli
 
-```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/angular
-npm install
-```
+## Steps - How to Run Project
 
-## Build commands
-
-```bash
-npm run build # build to a directory
-npm run start # continously build, as a server
-```
-
-After running the `npm run start` command, you will be given a localhost URL that can be visited in a browser.
-
-## Workarounds
-
-Please see `.browserslistrc` for a workaround for [this bug](https://github.com/angular/angular-cli/issues/22606).
+- Download repo from github : https://github.com/ahmer-najam/task-db
+- Go to root folder of project i.e. task-db
+- Open terminal and enter following commands for installing packages
+  > 'npm intsall' or 'yarn'
+- After installation enter 'ng serve' for executing the application
+- Access application through http:\\localhost:4200
